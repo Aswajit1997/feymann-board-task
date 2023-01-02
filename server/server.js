@@ -8,15 +8,15 @@ const port=process.env.PORT || 5001;
 const connectionString=process.env.MONGO_URL
 mongoose.connect(connectionString).then((res)=>{
     console.log("successfully connected to database");
-}).catch((error)=>console.log(error.message))
+}).catch((error)=>console.log(error.message));
 
 
 app.get('/',(req,res)=>{
-    res.send('hello')
+    res.send('hello');
 })
 
 
 app.listen(port,()=>{
-    console.log("listining on port ",port)
+    console.log("listining on port ",port);
 })
 
